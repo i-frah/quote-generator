@@ -7,6 +7,10 @@ function genQuote() {
     tweetQuote = tweetQuote.split('<br>').join('');
     tweetQuote = "https://twitter.com/intent/tweet?text=" + tweetQuote.split('"').join('')
     $('.twitter-share-button').attr('href', tweetQuote);
+    let facebookQuote = quotes[randNum].split(' ').join('%20');
+    facebookQuote = facebookQuote.split('<br>').join('');
+    facebookQuote = "https://www.facebook.com/sharer/sharer.php?u=" + facebookQuote.split('"').join('')
+    $('.facebook-share-button').attr('href', facebookQuote);
   }
   
   //quote array
